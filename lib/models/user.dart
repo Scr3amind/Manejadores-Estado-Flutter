@@ -1,3 +1,5 @@
+import 'package:meta/meta.dart';
+
 class User {
 
   String name;
@@ -5,8 +7,8 @@ class User {
   List<String> professions;
 
   User({
-    this.name,
+    @required this.name,
     this.age,
     this.professions
-  });
+  }):assert(name!=null);
 }
